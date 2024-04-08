@@ -1,0 +1,72 @@
+     /* Общие стили для навигационной панели и выпадающих списков */
+        .navbar {
+            overflow: hidden;
+            background-color: #543d29; /* Темно коричневый цвет */
+            color: #f2f2f2;
+            font-family: Arial; /* Используем шрифт Arial для текста */
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: inherit; /* Наследуем цвет текста от родителя */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #7d684f; /* Цвет при наведении */
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit; /* Важно для вертикального выравнивания на мобильных телефонах */
+            margin: 0; /* Важно для вертикального выравнивания на мобильных телефонах */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f5deb3; /* Светлокоричневый цвет */
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black; /* Цвет шрифта в выпадающем списке */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #7d5d3a; /* Цвет при наведении */
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        body {
+            background-color: #f5f5dc; /* Светлый бежевый цвет */
+            margin: 0; /* Убираем отступы по умолчанию */
+            padding: 0; /* Убираем отступы по умолчанию */
+        }
+
+        .content {
+            padding: 20px; /* Добавим немного отступа для красивого вида */
+        }
+

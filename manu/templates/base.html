@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+    {% load menu_tags %}
+   <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?{% now 'Y-m-d' %}">
 </head>
 <body>
+
+<div class="navbar">
+    <a href="/">Главная</a>
+    <div class="dropdown">
+        <button class="dropbtn">Магазины
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="{% url 'shop' %}">Список</a>
+            <a href="{% url 'shop' %}">Изменение</a>
+            <a href="{% url 'shop' %}">Описание</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Склады
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="{% url 'shop' %}">Список</a>
+            <a href="{% url 'shop' %}">Изменение</a>
+            <a href="{% url 'shop' %}">Описание</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Категории
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="{% url 'shop' %}">Список</a>
+            <a href="{% url 'shop' %}">Изменение</a>
+            <a href="{% url 'shop' %}">Описание</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Продукты
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="{% url 'shop' %}">Список</a>
+            <a href="{% url 'shop' %}">Изменение</a>
+            <a href="{% url 'shop' %}">Описание</a>
+        </div>
+    </div>
+</div>
+
+{% include 'helper/side_nav.html' %}
+
+<div class="container content">
+    {% block content %}
+    {% endblock %}
+</div>
 
 </body>
 </html>

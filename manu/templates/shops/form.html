@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock title %}
+{% block content %}
+    <div class="row">
+        <h2>{{ title }}</h2>
+
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="hidden" name="entry_id" value="{{ obj.id }}" />
+            <div class="row">
+                {% for field in form %}
+                {% if 'option_' not in field.name %}
+                <div class="mb-3">
+                    {{ field }}
+                </div>
+                {% endif %}
+                {% endfor %}
+
+            </div>
+
+        </form>
+
+    </div>
+{% endblock content %}
